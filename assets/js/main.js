@@ -26,6 +26,13 @@
 	// Function to be executed when the DOM is fully loaded
 		document.addEventListener('DOMContentLoaded', function() {
 			// Decode button event listener
+			document.getElementById('encodedUrl').addEventListener('keypress', function(event) {
+				if (event.key === 'Enter') {
+					event.preventDefault();
+					decodeUrl();
+				}
+			});
+
 			document.getElementById('decodeButton').addEventListener('click', function() {
 				decodeUrl();
 			});
