@@ -118,7 +118,8 @@
 			a.href = encodedUrl;
 			var params = new URLSearchParams(a.search);
 			var innerUrl = params.get('url')
-			var decodedUrl = innerUrl ? decodeURIComponent(innerUrl) : null;
+			var urlToDecode = innerUrl || encodedUrl;
+    		var decodedUrl = decodeURIComponent(urlToDecode);
 
 			if (decodedUrl && decodedUrl.trim() !== ''){
 				decodedUrlBox.textContent = decodedUrl;
@@ -150,6 +151,5 @@
 				copyStatus.style.display = 'none';
 			}, 2000);
 		}
-	
 
 })();
