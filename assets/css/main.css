@@ -847,11 +847,23 @@ button,
 }
 
 .inactive-link {
-  pointer-events: none; /* Prevents clicking */
-  color: grey; /* Visual cue that it's inactive */
-  text-decoration: none; /* No underline */
+  pointer-events: none;
+  color: grey;
+  text-decoration: none;
 }
 
+.copy-status {
+  display: none;
+  position: fixed;
+  bottom: 1rem;
+  left: 45%;
+  padding: 0.5rem 1rem;
+  background: #1cb495;
+  color: white;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
 
 /* Responsive adjustments */
 @media screen and (max-width: 480px) {

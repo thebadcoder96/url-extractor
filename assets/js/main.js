@@ -112,25 +112,43 @@
 	// Button functions
 		function decodeUrl() {
 			var encodedUrl = document.getElementById('encodedUrl').value.trim();
-			var decodedUrl = decodeURIComponent(encodedUrl);
+			var decodedUrlBox = document.getElementById('decodedUrl');
 
-			if (decodeUrl && decodeUrl != ''){
-				// Update the displayed URL
-				var decodedUrlBox = document.getElementById('decodedUrl');
+			var a = document.createElement('a');
+			a.href = encodedUrl;
+			var params = new URLSearchParams(a.search);
+			var innerUrl = params.get('url')
+			var decodedUrl = innerUrl ? decodeURIComponent(innerUrl) : null;
+
+			if (decodedUrl && decodedUrl.trim() !== ''){
 				decodedUrlBox.textContent = decodedUrl;
 				decodedUrlBox.href = decodedUrl;
 				decodedUrlBox.classList.remove('inactive-link');
+			}else{
+				decodedUrlBox.textContent = 'No URL to decode';
+				decodedUrlBox.classList.add('inactive-link');
 			}
 		}
 
 		function copyUrl() {
-			var decodedUrl = document.getElementById('decodedUrl').textContent; // Use textContent since it's not a link yet
+			var decodedUrl = document.getElementById('decodedUrl').textContent;
 			navigator.clipboard.writeText(decodedUrl).then(function() {
-				console.log('Copying to clipboard was successful!');
-				// Optionally show a message to the user
+				showCopyStatus('Copied to clipboard!', 'success');
 			}, function(err) {
-				console.error('Could not copy text: ', err);
+				showCopyStatus('Failed to copy text.', 'error');
+        		console.error('Could not copy text: ', err);
 			});
+		}
+
+		function showCopyStatus(message, status) {
+			var copyStatus = document.getElementById('copyStatus');
+			copyStatus.textContent = message;
+			copyStatus.style.display = 'block';
+			
+			// Hide the message after 2 seconds
+			setTimeout(function() {
+				copyStatus.style.display = 'none';
+			}, 2000);
 		}
 	
 

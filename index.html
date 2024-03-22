@@ -11,7 +11,7 @@
 		<!-- Header -->
 			<header id="header">
 				<h1>URL Extractor/Decoder</h1>
-				<p>A simple tool for extracting and decoding URL links to get the base URL you are looking for :)<br>
+				<p>A simple tool for extracting and decoding URL links to get the base URL from safelinks :)<br>
 					Brought to you by <a href="https://github.com/thebadcoder96" target="_blank">thebadcoder</a>.</p>
 			</header>
 
@@ -22,9 +22,12 @@
 			</form>
 		<!-- Decoded URL Display -->
 			<div id="decoded-url-container">
-				<a id="decodedUrl" href="#" target="_blank" class="inactive-link">Decoded URL will appear here</a>
+				<a id="decodedUrl" href="javascript:void(0);" target="_blank" class="inactive-link">Decoded URL will appear here</a>
 				<button id="copyButton">Copy</button>
 			</div>
+
+		<!-- Copy status message -->
+			<span id="copyStatus" class="copy-status"></span>
 
 		<!-- Footer -->
 			<footer id="footer">
