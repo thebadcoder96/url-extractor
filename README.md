@@ -6,7 +6,7 @@ The [URL Extractor/Decoder](https://thebadcoder96.github.io/url-extractor/) is a
 
 ## Why did I build this?
 
-I was not able to open embedded links by Outlook Safelinks at my work and sometimes when I am using internet in cafes. Being frustrated by manually extracting the link led to develop this simple tool. 
+I was not able to open any embedded links by Outlook Safelinks at my work and/or when I am using internet in cafes. Being frustrated by manually extracting the link, I decided to develop this simple tool. 
 
 ## Features
 
@@ -39,7 +39,7 @@ Please leave you feedback and suggestions for improvement or features you would 
 
 ## Acknowledgements
 
-Credit goes to HTML5 UP for providing the initial template!
+Credit goes to HTML5 UP for providing the initial website design template!
 
 ---
 
