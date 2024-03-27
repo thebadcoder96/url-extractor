@@ -116,6 +116,17 @@
 
 		})();
 
+	// Function to check if a URL is safe	
+		function isSafeUrl(url) {
+			if (!url.startsWith('https://')) {
+				alert('The URL is not secure. Only HTTPS URLs are allowed.');
+				return false;
+			}
+
+
+			return true;
+		}
+
 	// Button functions
 		function decodeUrl() {
 			var encodedUrl = document.getElementById('encodedUrl').value.trim();
@@ -129,10 +140,15 @@
     		var decodedUrl = decodeURIComponent(urlToDecode);
 
 			if (decodedUrl && decodedUrl.trim() !== ''){
-				decodedUrlBox.textContent = decodedUrl;
-				decodedUrlBox.href = decodedUrl;
-				decodedUrlBox.classList.remove('inactive-link');
-			}else{
+				if (isSafeUrl(decodedUrl)){
+					decodedUrlBox.textContent = decodedUrl;
+					decodedUrlBox.href = decodedUrl;
+					decodedUrlBox.classList.remove('inactive-link');
+				} else {
+					decodedUrlBox.textContent = 'The URL is not secure or not whitelisted.';
+					decodedUrlBox.classList.add('inactive-link');
+				}
+			} else {
 				decodedUrlBox.textContent = 'No URL to decode';
 				decodedUrlBox.classList.add('inactive-link');
 			}
