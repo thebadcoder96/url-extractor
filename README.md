@@ -1,12 +1,14 @@
-# URL Extractor/Decoder
+# Safe Link URL Extractor/Decoder
 
 ## Overview
 
-The [URL Extractor/Decoder](https://thebadcoder96.github.io/url-extractor/) is a simple yet powerful tool that helps you extract and decode URLs embedded within a query string, commonly found in tracking links or email links wrapped by services like Outlook Safelinks. This tool is designed to make it easy for you to find the actual link you're after, without the tracking parameters or wrappers.
+The [Safe Link URL Extractor/Decoder](https://thebadcoder96.github.io/url-extractor/) is a simple yet powerful tool that helps you extract and decode URLs embedded within a query string, commonly found in tracking links or email links wrapped by services like Outlook Safelinks. This tool is designed to make it easy for you to find the actual link you're after, without the tracking parameters or wrappers.
+
+> Please beware that safe links provide a layer of security from malicious links. Use this tool at your own risk and make sure that the link you want to extract is safe.
 
 ## Why did I build this?
 
-I was not able to open any embedded links by Outlook Safelinks at my work and/or when I am using internet in cafes. Being frustrated by manually extracting the link, I decided to develop this simple tool. 
+I was not able to open any embedded links by Outlook Safelinks at my work and/or when I am using the internet in cafes. Being frustrated by manually extracting the link, I decided to develop this simple tool. 
 
 ## Features
 
